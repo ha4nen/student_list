@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="studentlist.MainPage">
+
+    <StackLayout Orientation="Horizontal" Margin="5" Spacing="20" HorizontalOptions="Center">
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <Label Text="Students List"
+               BackgroundColor="LightPink"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               VerticalOptions="Center"
+               HeightRequest="30"
+               WidthRequest="150"
+                TextColor="Black"
+                FontSize="20"
+
+            />
+        
+        <ListView x:Name="studentListView"
+                  VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  Margin="5"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding ID}" FontSize="18"/>
+                            <Label Text="{Binding Name}" FontSize="18"/>
+                            <Label Text="{Binding Department}" FontSize="18"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+    
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <StackLayout Orientation="Horizontal" Spacing="10">
+        <Label Text="ID"
+               BackgroundColor="DeepPink"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               HeightRequest="30"
+               WidthRequest="80"
+               FontSize="20"
+               Margin="5"
+            />
+            <Entry
+                x:Name="id"
+                Keyboard="Numeric"
+                FontSize="20"
+                HeightRequest="30"
+                WidthRequest="150"
+                 Margin="5"
+                />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Label Text="Name"
+               BackgroundColor="DeepPink"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               HeightRequest="30"
+               WidthRequest="80"
+               FontSize="20"
+                Margin="5"
+            />
+            <Entry
+                x:Name="name"
+                Keyboard="Numeric"
+                FontSize="20"
+                HeightRequest="30"
+                WidthRequest="150"
+                Margin="5"
+                />
+            </StackLayout>
+    
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="Dep."
+               BackgroundColor="DeepPink"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               HeightRequest="30"
+               WidthRequest="80"
+               FontSize="20"
+               Margin="5"
+                 />
+                <Entry
+                x:Name="dep"
+                Keyboard="Numeric"
+                FontSize="20"
+                HeightRequest="30"
+                WidthRequest="150"
+                Margin="5"
+                />
+            </StackLayout>
+        </StackLayout>
+
+        <Button x:Name="add"
+                Text="ADD"
+                HeightRequest="30"
+                WidthRequest="100"
+                BackgroundColor="LightPink"
+                FontSize="15"
+            />
+
+    </StackLayout>
+</ContentPage>
